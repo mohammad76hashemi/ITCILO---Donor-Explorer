@@ -5,6 +5,7 @@
 const { h, arr, SDG } = DPE;
 const $ = s => document.querySelector(s);
 let user = null;
+let editingSubmission = null;
 
 /* ---------- helpers ---------- */
 function toast(msg) {
@@ -34,7 +35,7 @@ async function renderAccount() {
     nav.append(h('button', { type: 'button', class: 'top-btn solid', onclick: openLogin }, 'Log in'));
     return;
   }
-  nav.append(h('button', { type: 'button', class: 'top-btn solid', onclick: openForm }, '+ Submit a donor card'));
+  nav.append(h('button', { type: 'button', class: 'top-btn solid', onclick: () => openForm() }, '+ Submit a donor card'));
   if (user.role === 'admin') {
     const pending = (await Store.allSubmissions()).filter(s => s.status === 'pending').length;
     nav.append(
@@ -90,8 +91,35 @@ async function logout() {
       h('span', { class: 'sdg-name', text: name }))));
 })();
 
-function openForm() {
+function openForm(submission = null) {
   if (!user) { openLogin(); return; }
+  editingSubmission = submission;
+  const form = $('#card-form');
+  form.reset();
+  form.querySelectorAll('[data-extra-edit]').forEach(el => el.remove());
+  form.querySelectorAll('[data-edit-option]').forEach(el => el.remove());
+  if (submission) {
+    const c = submission.card;
+    for (const key of ['name','type','annualFunding','regions','modalities','innovative','links']) {
+      const el = form.elements.namedItem(key);
+      if (key === 'type' && c[key] && ![...el.options].some(o => o.value === c[key]))
+        el.append(h('option', { value: c[key], text: c[key], 'data-edit-option': 'true' }));
+      if (el) el.value = c[key] || '';
+    }
+    for (const key of ['priorities','opportunities','challenges']) {
+      const inputs = [...form.querySelectorAll(`[name="${key}"]`)];
+      arr(c[key]).forEach((value, i) => {
+        if (inputs[i]) inputs[i].value = value;
+        else inputs[0].parentElement.parentElement.append(h('div', { class: 'field', 'data-extra-edit': 'true' },
+          h('label', { text: `${key} ${i + 1}` }), h('input', { name: key, value, type: 'text', 'aria-label': `${key} ${i + 1}` })));
+      });
+    }
+    form.querySelectorAll('[name="sdgs"]').forEach(el => { el.checked = arr(c.sdgs).map(Number).includes(Number(el.value)); });
+  }
+  const adminEdit = submission && user.role === 'admin';
+  $('#submit-title').textContent = submission ? (adminEdit ? 'Edit participant submission' : 'Edit and resubmit card') : 'Donor Profile Card';
+  form.querySelector('button[type="submit"]').textContent = submission ? (adminEdit ? 'Save changes' : 'Resubmit for review') : 'Submit for approval';
+  form.querySelector('.foot-note').textContent = adminEdit ? 'Saving preserves the current approval status. Demo: stored in this browser only.' : 'An admin reviews every card before it appears in the library. Demo: stored in this browser only.';
   $('#card-error').hidden = true;
   $('#card-form').querySelectorAll('.invalid').forEach(x => x.classList.remove('invalid'));
   $('#submit-dlg').showModal();
@@ -130,10 +158,12 @@ $('#card-form').addEventListener('submit', async e => {
   const btn = form.querySelector('button[type="submit"]');
   btn.disabled = true;
   try {
-    await Store.submit(card);
+    if (editingSubmission) await Store.updateSubmission(editingSubmission.id, card, editingSubmission.version || 1);
+    else await Store.submit(card);
     form.reset();
     $('#submit-dlg').close();
-    toast('Card sent for review. You can follow it in “My submissions”.');
+    toast(editingSubmission ? (user.role === 'admin' ? 'Changes saved. Approval status unchanged.' : 'Card resubmitted for review.') : 'Card sent for review.');
+    editingSubmission = null;
   } catch (ex) {
     err.textContent = ex.message;
     err.hidden = false;
@@ -167,6 +197,15 @@ function cardView(c) {
     row('Links / references', String(c.links || '').split(/\n+/).filter(Boolean)));
 }
 
+
+function historyView(s) {
+  if (!s.history?.length) return null;
+  return h('details', { class: 'edit-history' }, h('summary', { text: `Revision history (${s.history.length})` }),
+    s.history.map(item => h('div', { class: 'review-note' },
+      h('p', { text: `${item.action} · ${fmtDate(item.at)}` }),
+      item.previous?.note ? h('p', { text: `Previous reviewer feedback: ${item.previous.note}` }) : null)));
+}
+
 /* ---------- my submissions ---------- */
 async function openMine() {
   await renderMine();
@@ -186,7 +225,10 @@ async function renderMine() {
       h('span', { class: 'sub-title' }, h('strong', { text: s.card.name }), h('span', { class: 'muted', text: `Sent ${fmtDate(s.submittedAt)}` })),
       badge(s.status)),
     s.note ? h('p', { class: 'review-note' }, h('strong', { text: 'Reviewer note: ' }), s.note) : null,
-    cardView(s.card))));
+    cardView(s.card),
+    historyView(s),
+    s.status === 'rejected' ? h('button', { type: 'button', class: 'btn primary',
+      onclick: () => { $('#mine-dlg').close(); openForm(s); } }, 'Edit and resubmit') : null)));
 }
 
 /* ---------- admin: review ---------- */
@@ -220,6 +262,8 @@ async function renderReview() {
           h('span', { class: 'muted', text: `${s.userName} · ${s.userEmail} · ${fmtDate(s.submittedAt)}` })),
         badge(s.status)),
       cardView(s.card),
+      historyView(s),
+      h('button', { type: 'button', class: 'btn', onclick: () => { $('#review-dlg').close(); openForm(s); } }, 'Edit submission'),
       s.status === 'pending'
         ? h('div', { class: 'review-actions' },
             h('label', { for: noteId, text: 'Note to the participant (optional, shown if you return the card)' }),
@@ -299,9 +343,16 @@ $('#filters-reset').addEventListener('click', async () => {
   } catch (ex) { toast(ex.message); }
 });
 
+window.addEventListener('dpe:edit-submission', e => openForm(e.detail));
+
 /* ---------- keep everything in sync ---------- */
 window.addEventListener('store:change', async () => {
+  const previousEmail = user?.email;
   await renderAccount();
+  if (previousEmail !== user?.email) {
+    ['submit-dlg','mine-dlg','review-dlg','filters-dlg','profile-edit-dlg'].forEach(id => document.getElementById(id)?.close());
+    editingSubmission = null;
+  }
   if ($('#mine-dlg').open) renderMine();
   if ($('#review-dlg').open) renderReview();
 });

@@ -9,6 +9,7 @@ const LINKS = { website: 'Official website', strategy: 'Strategy', annualReport:
 const SORTS = { name: 'Name (A–Z)', type: 'Organisation type', sdgs: 'Most SDGs covered' };
 
 const state = { q: '', sort: 'name', sel: {}, openId: null, pushed: false, pop: null };
+let adminUser = null;
 let baseDonors = [], donors = [], byId = new Map(), filters = [], VALUES = {}, meta = {};
 
 /* ---------- loading ---------- */
@@ -50,13 +51,16 @@ function submissionToDonor(s) {
     references: lines,
     links: { website: firstUrl || '' },
     source: `Participant submission by ${s.userName} (Donor Detective Challenge)`,
-    lastChecked: (s.reviewedAt || '').slice(0, 10)
+    lastChecked: '',
+    submissionId: s.id
   };
 }
 
 async function loadDynamic() {
   const approved = await Store.approvedSubmissions();
-  donors = baseDonors.concat(approved.map(submissionToDonor));
+  adminUser = await Store.currentUser();
+  const overrides = await Store.getProfileOverrides();
+  donors = baseDonors.map(d => ({ ...d, ...(overrides[d.id]?.profile || {}), id: d.id })).concat(approved.map(submissionToDonor));
   byId = new Map(donors.map(d => [d.id, d]));
   filters = (await Store.getFilterConfig()).filter(f => DPE.FILTER_FIELDS[f.key]);
   filters.forEach(f => { if (!state.sel[f.key]) state.sel[f.key] = new Set(); });
@@ -283,6 +287,16 @@ function renderDetail(d) {
       geoText(d) ? h('p', { class: 'd-geo', text: geoText(d) }) : null,
       site ? h('div', { class: 'd-actions' }, h('a', { class: 'btn primary', href: site, target: '_blank', rel: 'noopener noreferrer' }, 'Visit official website ↗')) : null),
     h('div', { class: 'd-body' },
+      adminUser?.role === 'admin' ? h('div', { class: 'profile-edit-tools' },
+        h('button', { type: 'button', class: 'btn primary', text: d.contributed ? 'Edit participant submission' : 'Edit profile',
+          onclick: async () => {
+            if (d.contributed) {
+              const s = (await Store.allSubmissions()).find(s => s.id === d.submissionId);
+              if (s) window.dispatchEvent(new CustomEvent('dpe:edit-submission', { detail: s }));
+            } else openProfileEditor(d);
+          } }),
+        !d.contributed ? h('button', { type: 'button', class: 'btn', text: 'Export course-team JSON', onclick: exportProfiles }) : null,
+        h('p', { class: 'muted', text: 'Demo: edits are stored in this browser only. Export course-team JSON to update GitHub. Participant submissions remain separate.' })) : null,
       glance.length ? h('section', {}, h('dl', { class: 'glance' }, glance.map(([t, dd]) => h('div', {}, h('dt', { text: t }), dd)))) : null,
       d.overview ? h('section', {}, h('h3', { text: 'About' }), paragraphs(d.overview)) : null,
       arr(d.priorities).length ? h('section', {}, h('h3', { text: d.contributed ? 'Top priority sectors / themes' : 'Thematic priorities' }), bullets(d.priorities)) : null,
@@ -304,6 +318,80 @@ function renderDetail(d) {
         h('p', { text: `Source: ${d.source || '—'}` }),
         h('p', { text: `Last checked: ${d.lastChecked || 'not yet verified'}` })),
       h('p', { class: 'key-hint' }, 'Press ', h('kbd', { text: 'Esc' }), ' or ', h('kbd', { text: '←' }), ' to close')));
+}
+
+
+/* Course-team profile editor: preserves IDs and unedited metadata. */
+const profileFields = {
+  name: 'Organisation name', type: 'Organisation type', shortDescription: 'Short description',
+  overview: 'About', howToPartner: 'How to partner', annualFunding: 'Annual funding (include year and scope)',
+  innovativeFinance: 'Innovative financing', focusText: 'Additional geographic context',
+  sectors: 'Sectors', priorities: 'Thematic priorities', regions: 'Regions', countries: 'Countries',
+  sdgs: 'SDG numbers (one per line)', modalities: 'Partnership / funding modalities', worksWith: 'Works with',
+  opportunities: 'Partnership opportunities', challenges: 'Challenges / barriers',
+  source: 'Source description', lastChecked: 'Last verified date (YYYY-MM-DD; leave blank if unverified)'
+};
+const arrayFields = new Set(['sectors','priorities','regions','countries','sdgs','modalities','worksWith','opportunities','challenges']);
+async function openProfileEditor(d) {
+  if ((await Store.currentUser())?.role !== 'admin') return;
+  document.getElementById('profile-edit-dlg')?.remove();
+  const revision = (await Store.getProfileOverrides())[d.id]?.revision || 0;
+  const dialog = h('dialog', { id: 'profile-edit-dlg', class: 'modal', 'aria-labelledby': 'profile-edit-title' });
+  const body = h('div', { class: 'modal-body form-body' },
+    h('p', { class: 'review-note', text: 'Browser-only demo edit. This does not change data/donors.json on GitHub. Export the course-team JSON after saving. Use one item per line in list fields; existing filter labels are suggested below.' }));
+  const controls = {};
+  for (const [key, label] of Object.entries(profileFields)) {
+    const id = 'edit-profile-' + key;
+    controls[key] = h('textarea', { id, rows: arrayFields.has(key) || ['overview','howToPartner'].includes(key) ? '4' : '2' });
+    controls[key].value = arrayFields.has(key) ? arr(d[key]).join('\n') : (d[key] || '');
+    const suggestions = arrayFields.has(key) && !['sdgs','opportunities','challenges'].includes(key)
+      ? [...new Set(baseDonors.flatMap(x => arr(x[key])))].sort().join(' · ') : '';
+    body.append(h('div', { class: 'field' }, h('label', { for: id, text: label }), controls[key],
+      suggestions ? h('p', { class: 'hint', text: 'Existing labels: ' + suggestions }) : null));
+  }
+  const linkControls = {};
+  for (const key of Object.keys(LINKS)) {
+    linkControls[key] = h('input', { id: 'edit-link-' + key, type: 'url', value: d.links?.[key] || '' });
+    body.append(h('div', { class: 'field' }, h('label', { for: 'edit-link-' + key, text: LINKS[key] }), linkControls[key]));
+  }
+  const error = h('p', { class: 'form-error', role: 'alert' }); body.append(error);
+  const save = h('button', { type: 'submit', class: 'btn primary', text: 'Save in this browser' });
+  const form = h('form', { class: 'modal-inner' },
+    h('div', { class: 'modal-head' }, h('h2', { id: 'profile-edit-title', text: 'Edit course-team profile' }),
+      h('button', { type: 'button', class: 'icon-btn', 'aria-label': 'Close editor', text: '×', onclick: () => dialog.close() })),
+    body, h('div', { class: 'modal-foot' },
+      h('button', { type: 'button', class: 'btn', text: 'Cancel', onclick: () => dialog.close() }), save));
+  form.addEventListener('submit', async e => {
+    e.preventDefault(); save.disabled = true; error.textContent = '';
+    try {
+      const profile = { ...d, links: { ...(d.links || {}) } };
+      for (const [key, input] of Object.entries(controls)) {
+        profile[key] = arrayFields.has(key) ? [...new Set(input.value.split(/\n+/).map(s => s.trim()).filter(Boolean))] : input.value.trim();
+      }
+      profile.sdgs = profile.sdgs.map(Number);
+      if (profile.sdgs.some(n => !Number.isInteger(n) || n < 1 || n > 17)) throw new Error('SDGs must be numbers between 1 and 17.');
+      if (!profile.type) throw new Error('Organisation type is required.');
+      if (profile.lastChecked && !/^\d{4}-\d{2}-\d{2}$/.test(profile.lastChecked)) throw new Error('Use YYYY-MM-DD for the verified date.');
+      for (const [key, input] of Object.entries(linkControls)) {
+        const value = input.value.trim();
+        if (value && !/^https:\/\//i.test(value)) throw new Error('Links must start with https://');
+        profile.links[key] = value;
+      }
+      await Store.saveProfile(d.id, profile, revision);
+      dialog.close();
+    } catch (ex) { error.textContent = ex.message; }
+    finally { save.disabled = false; }
+  });
+  dialog.append(form); document.body.append(dialog); dialog.showModal(); controls.name.focus();
+}
+async function exportProfiles() {
+  if ((await Store.currentUser())?.role !== 'admin') return;
+  const overrides = await Store.getProfileOverrides();
+  const payload = { meta: { ...meta, lastUpdated: new Date().toISOString().slice(0,10) },
+    donors: baseDonors.map(d => ({ ...d, ...(overrides[d.id]?.profile || {}), id: d.id })) };
+  const url = URL.createObjectURL(new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' }));
+  const link = h('a', { href: url, download: 'donors.json' }); document.body.append(link); link.click(); link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
 /* ---------- open / close, linked to browser history ---------- */
@@ -416,6 +504,7 @@ window.addEventListener('store:change', async () => {
   await loadDynamic();
   update();
   if (state.openId && !byId.has(state.openId)) clearHash();
+  else if (state.openId) renderDetail(byId.get(state.openId));
 });
 
 $('#updated').textContent = meta.lastUpdated || '';

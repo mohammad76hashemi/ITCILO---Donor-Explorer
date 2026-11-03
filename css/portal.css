@@ -158,3 +158,11 @@ dialog.modal::backdrop { background: rgb(10 25 50 / .45); }
 
 /* ---------- Toast ---------- */
 .toast { position: fixed; left: 50%; bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 100; max-width: calc(100vw - 32px); background: var(--ink); color: #fff; border-radius: var(--round); padding: .65rem 1.2rem; font-size: .92rem; font-weight: 600; box-shadow: 0 10px 30px rgb(0 0 0 / .25); }
+
+/* Profile editing: reuses existing modal and form styling. */
+.profile-edit-tools { display:flex; flex-wrap:wrap; gap:.65rem; margin-bottom:1rem; }
+.profile-edit-tools p { flex-basis:100%; }
+#profile-edit-dlg .field { margin-bottom:1rem; }
+#profile-edit-dlg textarea, #profile-edit-dlg input { width:100%; box-sizing:border-box; }
+.edit-history { margin:.75rem 0; }
+.edit-history summary { cursor:pointer; }

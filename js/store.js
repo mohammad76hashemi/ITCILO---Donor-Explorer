@@ -20,16 +20,16 @@ const DEMO_USERS = {
   'student@demo.org': { password: 'demo', name: 'Demo Student', role: 'student' },
   'admin@demo.org':   { password: 'demo', name: 'Course Admin', role: 'admin' }
 };
-const KEYS = { session: 'dpe.session', subs: 'dpe.submissions', config: 'dpe.filterConfig' };
+const KEYS = { session: 'dpe.session', subs: 'dpe.submissions', config: 'dpe.filterConfig', overrides: 'dpe.profileOverrides' };
 const memory = {};
 
 function read(key, fallback) {
-  try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; }
+  try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : (key in memory ? memory[key] : fallback); }
   catch { return key in memory ? memory[key] : fallback; }
 }
 function write(key, value) {
+  try { localStorage.setItem(key, JSON.stringify(value)); } catch { throw new Error('Cannot save: browser storage is blocked or full. No changes were saved.'); }
   memory[key] = value;
-  try { localStorage.setItem(key, JSON.stringify(value)); } catch { /* storage blocked: keep in memory */ }
   window.dispatchEvent(new CustomEvent('store:change', { detail: { key } }));
 }
 const newId = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
@@ -90,6 +90,9 @@ async function review(id, decision, note) {
   const subs = read(KEYS.subs, []);
   const s = subs.find(x => x.id === id);
   if (!s) throw new Error('Submission not found.');
+  if (!['approve', 'reject'].includes(decision)) throw new Error('Invalid review decision.');
+  if (s.status !== 'pending') throw new Error('This card is no longer waiting for review.');
+  recordHistory(s, 'review:' + decision, user);
   s.status = decision === 'approve' ? 'approved' : 'rejected';
   s.note = note || '';
   s.reviewer = user.email;
@@ -121,7 +124,57 @@ async function resetFilterConfig() {
   window.dispatchEvent(new CustomEvent('store:change', { detail: { key: KEYS.config } }));
 }
 
+
+function recordHistory(s, action, user) {
+  s.history = Array.isArray(s.history) ? s.history : [];
+  const previous = { ...s }; delete previous.history;
+  s.history.push({ action, at: new Date().toISOString(), by: user.email,
+    previous: JSON.parse(JSON.stringify(previous)) });
+}
+function validateCard(card) {
+  if (!card || !String(card.name || '').trim() || !String(card.type || '').trim())
+    throw new Error('Donor name and type are required.');
+  if (!Array.isArray(card.sdgs) || !card.sdgs.length || card.sdgs.some(n => !Number.isInteger(n) || n < 1 || n > 17))
+    throw new Error('Select valid SDGs.');
+}
+async function updateSubmission(id, card, expectedVersion) {
+  const user = await currentUser();
+  if (!user) throw new Error('Please log in first.');
+  validateCard(card);
+  const subs = read(KEYS.subs, []), s = subs.find(x => x.id === id);
+  if (!s) throw new Error('Submission not found.');
+  if (expectedVersion !== undefined && (s.version || 1) !== expectedVersion)
+    throw new Error('This card changed after you opened it. Close and reopen the editor.');
+  const admin = user.role === 'admin';
+  if (!admin && (s.userEmail !== user.email || s.status !== 'rejected'))
+    throw new Error('You can only resubmit your own returned cards.');
+  recordHistory(s, admin ? 'admin-edit' : 'resubmit', user);
+  s.card = { ...s.card, ...card };
+  s.version = (s.version || 1) + 1;
+  s.updatedAt = new Date().toISOString(); s.updatedBy = user.email;
+  if (!admin) {
+    s.status = 'pending'; s.resubmittedAt = s.updatedAt;
+    s.note = ''; s.reviewer = null; s.reviewedAt = null;
+  }
+  write(KEYS.subs, subs); return s;
+}
+async function getProfileOverrides() { return read(KEYS.overrides, {}); }
+async function saveProfile(id, profile, expectedRevision) {
+  const user = await currentUser();
+  if (user?.role !== 'admin') throw new Error('Only admins can edit library profiles.');
+  if (!id || !String(profile.name || '').trim()) throw new Error('Profile name is required.');
+  const overrides = read(KEYS.overrides, {}), old = overrides[id];
+  if (expectedRevision !== undefined && (old?.revision || 0) !== expectedRevision)
+    throw new Error('This profile changed. Close and reopen the editor.');
+  const history = old?.history || [];
+  if (old) { const previous = { ...old }; delete previous.history; history.push(previous); }
+  overrides[id] = { profile: { ...profile, id }, revision: (old?.revision || 0) + 1,
+    updatedAt: new Date().toISOString(), updatedBy: user.email, history };
+  write(KEYS.overrides, overrides);
+}
+
 window.Store = {
+  updateSubmission, getProfileOverrides, saveProfile,
   isDemo: true,
   currentUser, login, logout,
   submit, mySubmissions, allSubmissions, review, approvedSubmissions,
