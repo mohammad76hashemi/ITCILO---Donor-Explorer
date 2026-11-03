@@ -1,0 +1,1610 @@
+{
+  "meta": {
+    "lastUpdated": "2026-11-02",
+    "sourceNote": "DEMO / WORKING DRAFT. Cleaned from the supplied donor directory, Donor Profile Cards and existing demo JSON. Not independently fact-checked or approved by the course team. Filter tags are editorial mappings of supplied descriptions, not confirmed eligibility. Missing information and conflicting financial figures have not been invented.",
+    "verificationStatus": "unverified",
+    "publicationPurpose": "Course demonstration",
+    "processingNote": "Original 13 profiles retained with existing IDs. New source-derived profiles are editorial drafts, not live participant submissions. Country examples are not exhaustive eligibility lists."
+  },
+  "donors": [
+    {
+      "id": "afdb",
+      "name": "African Development Bank Group (AfDB)",
+      "type": "Development bank",
+      "shortDescription": "Africa's regional development bank, financing infrastructure, agriculture, industrialisation and regional integration across the continent.",
+      "overview": "The African Development Bank Group finances development in its African member countries through the African Development Bank (lending on market-based terms), the African Development Fund (concessional finance for lower-income countries) and the Nigeria Trust Fund.\n\nIts strategic priorities, known as the 'High 5s', are to light up and power Africa, feed Africa, industrialise Africa, integrate Africa, and improve the quality of life for the people of Africa.\n\nThe Bank also manages several thematic trust funds and initiatives on climate, gender and youth entrepreneurship.",
+      "howToPartner": "Like other development banks, the AfDB lends mainly to governments and to private sector projects. Civil society and smaller organisations usually engage through Bank-financed projects, procurement, or specific funds and initiatives that issue calls.\n\nCheck the Bank's project portal for operations in your country and its procurement notices.",
+      "sectors": [
+        "Infrastructure & energy",
+        "Agriculture & food security",
+        "Private sector development",
+        "Employment & decent work"
+      ],
+      "priorities": [
+        "Youth employment",
+        "Climate adaptation",
+        "Smallholder farmers",
+        "Women's economic empowerment"
+      ],
+      "regions": [
+        "Sub-Saharan Africa",
+        "Middle East & North Africa"
+      ],
+      "countries": [],
+      "sdgs": [
+        2,
+        7,
+        8,
+        9,
+        13
+      ],
+      "modalities": [
+        "Loans",
+        "Grants",
+        "Guarantees & equity",
+        "Co-financing"
+      ],
+      "worksWith": [
+        "Governments",
+        "Private sector",
+        "NGOs & civil society"
+      ],
+      "links": {
+        "website": "https://www.afdb.org",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "",
+        "contact": ""
+      },
+      "source": "Unverified demo draft. Original demo source label: AfDB official website",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "existing-demo-json",
+        "sourceFile": "donors.json",
+        "editorialStatus": "Retained for demo; requires factual review"
+      },
+      "annualFunding": "",
+      "innovativeFinance": "",
+      "opportunities": [],
+      "challenges": [],
+      "references": [],
+      "contributed": false
+    },
+    {
+      "id": "afreximbank",
+      "name": "African Export-Import Bank (Afreximbank)",
+      "type": "Development bank",
+      "shortDescription": "An African trade-finance institution described in the supplied card as supporting export development, industrialisation, value chains and intra-African trade.",
+      "overview": "An African trade-finance institution described in the supplied card as supporting export development, industrialisation, value chains and intra-African trade.",
+      "howToPartner": "",
+      "sectors": [
+        "Private sector development",
+        "Infrastructure & energy"
+      ],
+      "priorities": [],
+      "regions": [
+        "Sub-Saharan Africa",
+        "Middle East & North Africa"
+      ],
+      "countries": [],
+      "sdgs": [
+        8,
+        9,
+        17
+      ],
+      "modalities": [
+        "Loans",
+        "Grants",
+        "Guarantees & equity",
+        "Blended finance",
+        "Co-financing"
+      ],
+      "worksWith": [],
+      "annualFunding": "",
+      "innovativeFinance": "Risk-sharing facilities and payment-system support, including PAPSS, are mentioned in the supplied card.",
+      "opportunities": [
+        "Co-financing trade and infrastructure projects.",
+        "Supporting SMEs and export-oriented businesses.",
+        "Regional integration and AfCFTA-related collaboration."
+      ],
+      "challenges": [
+        "Macroeconomic and political risks.",
+        "The supplied card describes limited concessional financing relative to traditional donors.",
+        "Its assets and commitments should not be presented as annual funding."
+      ],
+      "links": {
+        "website": "https://www.afreximbank.com",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "",
+        "contact": ""
+      },
+      "source": "Unverified editorial draft based on supplied Donor Profile Cards, pages 24. Not a live participant submission.",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "uploaded-profile-card",
+        "sourceFile": "Donor-Pofile-Card-Final-List.pdf",
+        "pages": "24",
+        "editorialStatus": "AI-assisted cleaning; course-team review required",
+        "taggingNote": "Sectors and thematic labels mapped from supplied text; not verified eligibility."
+      },
+      "references": [],
+      "contributed": false
+    },
+    {
+      "id": "aid-for-trade",
+      "name": "Aid for Trade Initiative (WTO)",
+      "type": "Development initiative",
+      "shortDescription": "The supplied card describes an initiative focused on trade-related capacity, infrastructure, and trade policy and regulatory reform. This entry is an initiative profile, not a claim of direct access to a single WTO grant fund.",
+      "overview": "The supplied card describes an initiative focused on trade-related capacity, infrastructure, and trade policy and regulatory reform. This entry is an initiative profile, not a claim of direct access to a single WTO grant fund.",
+      "howToPartner": "",
+      "sectors": [
+        "Private sector development",
+        "Infrastructure & energy",
+        "Education & skills"
+      ],
+      "priorities": [],
+      "regions": [
+        "Global"
+      ],
+      "countries": [],
+      "sdgs": [
+        8,
+        9,
+        17
+      ],
+      "modalities": [
+        "Grants",
+        "Loans",
+        "Technical cooperation",
+        "Blended finance"
+      ],
+      "worksWith": [],
+      "annualFunding": "",
+      "innovativeFinance": "Blended finance, results-based approaches and public–private partnerships are mentioned in the supplied card.",
+      "opportunities": [
+        "Trade-policy and export-readiness training.",
+        "Capacity development for officials and SMEs.",
+        "Research and advisory support on trade policy."
+      ],
+      "challenges": [
+        "Identify the actual financing institution and programme before pursuing funding.",
+        "Demonstrating impact and finding appropriate calls are highlighted in the supplied card."
+      ],
+      "links": {
+        "website": "",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "https://www.wto.org/english/tratop_e/devel_e/a4t_e/about_aid4trade_e.htm",
+        "contact": ""
+      },
+      "source": "Unverified editorial draft based on supplied Donor Profile Cards, pages 18. Not a live participant submission.",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "uploaded-profile-card",
+        "sourceFile": "Donor-Pofile-Card-Final-List.pdf",
+        "pages": "18",
+        "editorialStatus": "AI-assisted cleaning; course-team review required",
+        "taggingNote": "Sectors and thematic labels mapped from supplied text; not verified eligibility."
+      },
+      "references": [],
+      "contributed": false
+    },
+    {
+      "id": "adb",
+      "name": "Asian Development Bank (ADB)",
+      "type": "Development bank",
+      "shortDescription": "A regional development bank. The supplied card highlights finance, energy and transport in Asia, with climate finance and civil society engagement as partnership areas.",
+      "overview": "A regional development bank. The supplied card highlights finance, energy and transport in Asia, with climate finance and civil society engagement as partnership areas.",
+      "howToPartner": "Review financing partnership guidance and project-specific opportunities. No specific SDG numbers were extracted because the card lists strategic themes rather than numbered goals.",
+      "sectors": [
+        "Private sector development",
+        "Infrastructure & energy",
+        "Climate & environment"
+      ],
+      "priorities": [
+        "Climate mitigation",
+        "Climate adaptation"
+      ],
+      "regions": [
+        "Asia & Pacific"
+      ],
+      "countries": [],
+      "sdgs": [],
+      "modalities": [
+        "Grants",
+        "Loans",
+        "Blended finance"
+      ],
+      "worksWith": [],
+      "annualFunding": "",
+      "innovativeFinance": "The card mentions blue bonds and the Innovative Finance Facility for Climate in Asia and the Pacific (IF-CAP).",
+      "opportunities": [
+        "Participation in ADB-financed projects.",
+        "Civil society and NGO engagement.",
+        "Climate-finance partnerships."
+      ],
+      "challenges": [
+        "Complex procurement and compliance requirements.",
+        "The supplied card reports no dedicated NGO fund; verify the relevant current funding route."
+      ],
+      "links": {
+        "website": "https://www.adb.org",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "https://www.adb.org/what-we-do/financing-partnerships",
+        "contact": ""
+      },
+      "source": "Unverified editorial draft based on supplied Donor Profile Cards, pages 27. Not a live participant submission.",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "uploaded-profile-card",
+        "sourceFile": "Donor-Pofile-Card-Final-List.pdf",
+        "pages": "27",
+        "editorialStatus": "AI-assisted cleaning; course-team review required",
+        "taggingNote": "Sectors and thematic labels mapped from supplied text; not verified eligibility."
+      },
+      "references": [],
+      "contributed": false
+    },
+    {
+      "id": "giz",
+      "name": "Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ)",
+      "type": "Bilateral agency",
+      "shortDescription": "Germany's federally owned enterprise for international cooperation, implementing technical cooperation projects mainly on behalf of the German government.",
+      "overview": "GIZ is a federal enterprise that implements international cooperation projects, mainly commissioned by the German Federal Ministry for Economic Cooperation and Development (BMZ). It also works for other German ministries, the European Union and other public and private clients.\n\nGIZ is an implementing agency rather than a classic donor. Its strength is technical cooperation: advisory services, capacity development, and long-term programmes with partner governments in areas such as vocational training, energy, climate, governance and sustainable economic development.\n\nGIZ is present in many countries through country offices, which makes local engagement possible.",
+      "howToPartner": "Organisations can work with GIZ as implementing partners, grant recipients (local subsidies or financing agreements under specific projects), or service providers through GIZ tenders.\n\nPrivate companies can explore the develoPPP programme, which co-finances development partnerships with the private sector. The best entry point is usually the GIZ country office and the projects already running in your sector.",
+      "sectors": [
+        "Education & skills",
+        "Employment & decent work",
+        "Climate & environment",
+        "Infrastructure & energy",
+        "Governance & human rights"
+      ],
+      "priorities": [
+        "Youth employment",
+        "Green transition",
+        "Climate mitigation",
+        "Digital transformation"
+      ],
+      "regions": [
+        "Sub-Saharan Africa",
+        "Asia & Pacific",
+        "Latin America & Caribbean",
+        "Middle East & North Africa",
+        "Europe & Central Asia"
+      ],
+      "countries": [],
+      "sdgs": [
+        4,
+        7,
+        8,
+        13,
+        16
+      ],
+      "modalities": [
+        "Technical cooperation",
+        "Grants",
+        "Co-financing"
+      ],
+      "worksWith": [
+        "Governments",
+        "Private sector",
+        "NGOs & civil society",
+        "Research institutions"
+      ],
+      "links": {
+        "website": "https://www.giz.de/en",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "",
+        "contact": ""
+      },
+      "source": "Unverified demo draft. Original demo source label: GIZ official website",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "existing-demo-json",
+        "sourceFile": "donors.json",
+        "editorialStatus": "Retained for demo; requires factual review"
+      },
+      "annualFunding": "",
+      "innovativeFinance": "",
+      "opportunities": [],
+      "challenges": [],
+      "references": [],
+      "contributed": false
+    },
+    {
+      "id": "ebid",
+      "name": "ECOWAS Bank for Investment and Development (EBID)",
+      "type": "Development bank",
+      "shortDescription": "A West African development finance institution. The supplied card highlights infrastructure, rural development, environment and social sectors.",
+      "overview": "A West African development finance institution. The supplied card highlights infrastructure, rural development, environment and social sectors.",
+      "howToPartner": "",
+      "sectors": [
+        "Infrastructure & energy",
+        "Agriculture & food security",
+        "Social protection",
+        "Climate & environment"
+      ],
+      "priorities": [],
+      "regions": [
+        "Sub-Saharan Africa"
+      ],
+      "countries": [],
+      "sdgs": [
+        1,
+        4,
+        9,
+        10,
+        12,
+        13,
+        17
+      ],
+      "modalities": [
+        "Loans",
+        "Guarantees & equity",
+        "Blended finance"
+      ],
+      "worksWith": [],
+      "annualFunding": "",
+      "innovativeFinance": "The supplied card mentions equity participation, guarantee mechanisms and financial engineering services.",
+      "opportunities": [
+        "Social-sector and inclusion partnerships.",
+        "Climate adaptation, agriculture, food security and education initiatives."
+      ],
+      "challenges": [
+        "The supplied card describes a smaller allocation to the social sector than infrastructure.",
+        "Pre-planned corporate social responsibility activities may limit flexibility."
+      ],
+      "links": {
+        "website": "https://www.bidc-ebid.org/en/",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "",
+        "contact": ""
+      },
+      "source": "Unverified editorial draft based on supplied Donor Profile Cards, pages 29. Not a live participant submission.",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "uploaded-profile-card",
+        "sourceFile": "Donor-Pofile-Card-Final-List.pdf",
+        "pages": "29",
+        "editorialStatus": "AI-assisted cleaning; course-team review required",
+        "taggingNote": "Sectors and thematic labels mapped from supplied text; not verified eligibility."
+      },
+      "references": [],
+      "contributed": false
+    },
+    {
+      "id": "eea-norway-grants",
+      "name": "EEA and Norway Grants",
+      "type": "Regional funding mechanism",
+      "shortDescription": "A grant mechanism supported by Iceland, Liechtenstein and Norway. The supplied card emphasises the green transition, democracy and human rights, social inclusion, and donor–beneficiary partnerships.",
+      "overview": "A grant mechanism supported by Iceland, Liechtenstein and Norway. The supplied card emphasises the green transition, democracy and human rights, social inclusion, and donor–beneficiary partnerships.",
+      "howToPartner": "Identify the relevant national programme operator or Civil Society Fund and check the current call. The country list below reproduces the supplied card and is not verified current eligibility.",
+      "sectors": [
+        "Climate & environment",
+        "Governance & human rights",
+        "Social protection"
+      ],
+      "priorities": [
+        "Green transition",
+        "Democracy & human rights"
+      ],
+      "regions": [
+        "Europe & Central Asia"
+      ],
+      "countries": [
+        "Bulgaria",
+        "Croatia",
+        "Cyprus",
+        "Czech Republic",
+        "Estonia",
+        "Greece",
+        "Hungary",
+        "Latvia",
+        "Lithuania",
+        "Malta",
+        "Poland",
+        "Portugal",
+        "Romania",
+        "Slovakia",
+        "Slovenia"
+      ],
+      "sdgs": [
+        5,
+        10,
+        13,
+        16
+      ],
+      "modalities": [
+        "Grants"
+      ],
+      "worksWith": [],
+      "annualFunding": "",
+      "innovativeFinance": "Bilateral partnership funds are described in the supplied card.",
+      "opportunities": [
+        "Partnerships between organisations in donor and beneficiary countries.",
+        "Civil society projects through relevant country funds and programme operators."
+      ],
+      "challenges": [
+        "Access depends on national calls and programme procedures.",
+        "Reporting, partnership and co-financing requirements need to be checked."
+      ],
+      "links": {
+        "website": "https://eeagrants.org/en/fmo",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "",
+        "contact": ""
+      },
+      "source": "Unverified editorial draft based on supplied Donor Profile Cards, pages 14–15. Not a live participant submission.",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "uploaded-profile-card",
+        "sourceFile": "Donor-Pofile-Card-Final-List.pdf",
+        "pages": "14–15",
+        "editorialStatus": "AI-assisted cleaning; course-team review required",
+        "taggingNote": "Sectors and thematic labels mapped from supplied text; not verified eligibility."
+      },
+      "references": [],
+      "contributed": false
+    },
+    {
+      "id": "dg-echo",
+      "name": "European Commission – DG ECHO",
+      "type": "Multilateral organisation",
+      "shortDescription": "The supplied card describes the European Commission humanitarian aid department, with priorities in emergency food and shelter, essential healthcare and protection in crisis settings.",
+      "overview": "The supplied card describes the European Commission humanitarian aid department, with priorities in emergency food and shelter, essential healthcare and protection in crisis settings.",
+      "howToPartner": "The supplied card identifies the EU Humanitarian Partnership Certificate and arrangements with international organisations as access routes. Verify current eligibility and humanitarian funding guidance.",
+      "sectors": [
+        "Health",
+        "Agriculture & food security",
+        "Social protection"
+      ],
+      "priorities": [
+        "Fragile & conflict-affected settings",
+        "Global health"
+      ],
+      "regions": [
+        "Global"
+      ],
+      "countries": [],
+      "sdgs": [
+        2,
+        3,
+        5,
+        16,
+        17
+      ],
+      "modalities": [
+        "Grants"
+      ],
+      "worksWith": [],
+      "annualFunding": "",
+      "innovativeFinance": "The supplied card mentions multi-year programmatic partnerships.",
+      "opportunities": [
+        "Programmatic partnerships in protracted crises.",
+        "Humanitarian delivery and protection partnerships."
+      ],
+      "challenges": [
+        "Partner eligibility and certification requirements must be checked.",
+        "Strong compliance requirements and adherence to humanitarian principles."
+      ],
+      "links": {
+        "website": "",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "",
+        "contact": ""
+      },
+      "source": "Unverified editorial draft based on supplied Donor Profile Cards, pages 22–23. Not a live participant submission.",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "uploaded-profile-card",
+        "sourceFile": "Donor-Pofile-Card-Final-List.pdf",
+        "pages": "22–23",
+        "editorialStatus": "AI-assisted cleaning; course-team review required",
+        "taggingNote": "Sectors and thematic labels mapped from supplied text; not verified eligibility."
+      },
+      "references": [],
+      "contributed": false
+    },
+    {
+      "id": "eu-intpa",
+      "name": "European Commission – DG International Partnerships (INTPA)",
+      "type": "Multilateral organisation",
+      "shortDescription": "The European Commission department that designs EU development policy and funds partnerships in Africa, Asia, the Pacific, Latin America and the Caribbean.",
+      "overview": "DG INTPA is the European Commission's Directorate-General responsible for international partnerships. It manages a large share of the EU's external funding under the Global Europe instrument (NDICI-Global Europe) for Sub-Saharan Africa, Asia, the Pacific, Latin America and the Caribbean.\n\nThe EU's flagship investment strategy, Global Gateway, focuses on digital, climate and energy, transport, health, and education and research. Alongside large investment programmes, DG INTPA funds civil society, human rights, governance and thematic programmes.\n\nThe EU works in a 'Team Europe' approach, combining resources from EU institutions, Member States and European development finance institutions. Much of the programming is managed by EU Delegations in partner countries.",
+      "howToPartner": "Grants are awarded mainly through calls for proposals published on the EU Funding & Tenders portal. Applicants usually need to register in the EU's system and often apply in consortia with co-applicants. Calls frequently require co-financing from the applicant.\n\nFor country-level opportunities, follow the EU Delegation in your country, which publishes local calls for civil society and human rights programmes.",
+      "sectors": [
+        "Governance & human rights",
+        "Climate & environment",
+        "Infrastructure & energy",
+        "Education & skills",
+        "Private sector development"
+      ],
+      "priorities": [
+        "Green transition",
+        "Digital transformation",
+        "Democracy & human rights",
+        "Youth employment"
+      ],
+      "regions": [
+        "Sub-Saharan Africa",
+        "Asia & Pacific",
+        "Latin America & Caribbean"
+      ],
+      "countries": [],
+      "sdgs": [
+        4,
+        7,
+        8,
+        9,
+        13,
+        16,
+        17
+      ],
+      "modalities": [
+        "Grants",
+        "Calls for proposals",
+        "Blended finance",
+        "Budget support",
+        "Co-financing"
+      ],
+      "worksWith": [
+        "Governments",
+        "NGOs & civil society",
+        "UN agencies",
+        "Private sector",
+        "Research institutions"
+      ],
+      "links": {
+        "website": "https://international-partnerships.ec.europa.eu",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "",
+        "contact": ""
+      },
+      "source": "Unverified demo draft. Original demo source label: European Commission – International Partnerships website",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "existing-demo-json",
+        "sourceFile": "donors.json",
+        "editorialStatus": "Retained for demo; requires factual review"
+      },
+      "annualFunding": "",
+      "innovativeFinance": "",
+      "opportunities": [],
+      "challenges": [],
+      "references": [],
+      "contributed": false
+    },
+    {
+      "id": "bmz",
+      "name": "Federal Ministry for Economic Cooperation and Development (BMZ)",
+      "type": "Bilateral agency",
+      "shortDescription": "German development cooperation ministry. The supplied cards describe work on poverty and inequality, climate and energy, employment, governance and peace.",
+      "overview": "German development cooperation ministry. The supplied cards describe work on poverty and inequality, climate and energy, employment, governance and peace.",
+      "howToPartner": "The supplied cards identify GIZ and KfW as cooperation channels. Confirm the relevant programme and application route before approaching them.",
+      "sectors": [
+        "Climate & environment",
+        "Employment & decent work",
+        "Governance & human rights",
+        "Agriculture & food security"
+      ],
+      "priorities": [
+        "Climate mitigation",
+        "Green transition",
+        "Democracy & human rights"
+      ],
+      "regions": [
+        "Sub-Saharan Africa",
+        "Middle East & North Africa",
+        "Asia & Pacific"
+      ],
+      "countries": [],
+      "sdgs": [
+        1,
+        2,
+        5,
+        7,
+        8,
+        13,
+        16,
+        17
+      ],
+      "modalities": [
+        "Grants",
+        "Loans",
+        "Technical cooperation",
+        "Blended finance"
+      ],
+      "worksWith": [],
+      "annualFunding": "",
+      "innovativeFinance": "Blended finance, climate finance and public–private partnerships are mentioned in the supplied cards.",
+      "opportunities": [
+        "Climate-resilient agriculture and rural development.",
+        "Skills development, youth employment and private-sector partnerships.",
+        "Governance and peacebuilding initiatives."
+      ],
+      "challenges": [
+        "The supplied cards report demanding financial reporting requirements.",
+        "Competition and alignment with programme priorities.",
+        "Funding figures differ in scope across the cards and require verification."
+      ],
+      "links": {
+        "website": "https://www.bmz.de",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "",
+        "contact": ""
+      },
+      "source": "Unverified editorial draft based on supplied Donor Profile Cards, pages 7–8, 21. Not a live participant submission.",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "uploaded-profile-card",
+        "sourceFile": "Donor-Pofile-Card-Final-List.pdf",
+        "pages": "7–8, 21",
+        "editorialStatus": "AI-assisted cleaning; course-team review required",
+        "taggingNote": "Sectors and thematic labels mapped from supplied text; not verified eligibility."
+      },
+      "references": [],
+      "contributed": false
+    },
+    {
+      "id": "ford-foundation",
+      "name": "Ford Foundation",
+      "type": "Private foundation",
+      "shortDescription": "A philanthropic foundation described in the supplied materials as focusing on inequality, social justice, human rights, civic engagement, culture and media.",
+      "overview": "A philanthropic foundation described in the supplied materials as focusing on inequality, social justice, human rights, civic engagement, culture and media.",
+      "howToPartner": "Consult the supplied grant opportunities page and current strategy before developing an approach.",
+      "sectors": [
+        "Governance & human rights",
+        "Gender equality"
+      ],
+      "priorities": [
+        "Democracy & human rights"
+      ],
+      "regions": [
+        "Global",
+        "Sub-Saharan Africa"
+      ],
+      "countries": [
+        "Kenya",
+        "Nigeria",
+        "South Africa"
+      ],
+      "sdgs": [
+        1,
+        5,
+        10,
+        16
+      ],
+      "modalities": [
+        "Grants",
+        "Guarantees & equity"
+      ],
+      "worksWith": [],
+      "annualFunding": "",
+      "innovativeFinance": "Program-related investments and mission-related investments are mentioned; these are different mechanisms and require separate eligibility checks.",
+      "opportunities": [
+        "Research and policy advocacy on inequality and economic justice.",
+        "Networks, coalitions and community-led approaches."
+      ],
+      "challenges": [
+        "Selective and competitive funding.",
+        "Clear strategic alignment and evidence of impact are highlighted in the supplied card."
+      ],
+      "links": {
+        "website": "https://www.fordfoundation.org",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "https://www.fordfoundation.org/work/our-grants/grant-opportunities/",
+        "contact": ""
+      },
+      "source": "Unverified editorial draft based on supplied Donor Profile Cards, pages 17. Not a live participant submission.",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "uploaded-profile-card",
+        "sourceFile": "Donor-Pofile-Card-Final-List.pdf",
+        "pages": "17",
+        "editorialStatus": "AI-assisted cleaning; course-team review required",
+        "taggingNote": "Sectors and thematic labels mapped from supplied text; not verified eligibility."
+      },
+      "references": [],
+      "contributed": false
+    },
+    {
+      "id": "fcdo",
+      "name": "Foreign, Commonwealth & Development Office (FCDO)",
+      "type": "Bilateral agency",
+      "shortDescription": "The UK government department that manages most of the UK's official development assistance alongside its diplomatic work.",
+      "overview": "The FCDO was created in 2020 by merging the UK's Foreign and Commonwealth Office with the Department for International Development. It manages most UK official development assistance (ODA), combining development, diplomacy and security objectives.\n\nThe UK government has announced a reduction of its aid budget to 0.3% of gross national income by 2027, so programme portfolios are changing. Recent priorities include humanitarian response, global health, climate, girls' education and economic development.\n\nMany FCDO programmes are delivered through large implementing partners and fund managers that run their own grant windows for local organisations.",
+      "howToPartner": "FCDO publishes procurement opportunities through UK government contract portals, and many grant funds are run by appointed fund managers. Local organisations usually access FCDO funding as sub-grantees or consortium members.\n\nThe UK's Development Tracker website lists active programmes by country, which helps identify implementing partners to approach.",
+      "sectors": [
+        "Health",
+        "Education & skills",
+        "Climate & environment",
+        "Governance & human rights"
+      ],
+      "priorities": [
+        "Global health",
+        "Fragile & conflict-affected settings",
+        "Climate adaptation",
+        "Women's economic empowerment"
+      ],
+      "regions": [
+        "Sub-Saharan Africa",
+        "Asia & Pacific",
+        "Middle East & North Africa",
+        "Global"
+      ],
+      "countries": [],
+      "sdgs": [
+        3,
+        4,
+        5,
+        13,
+        16
+      ],
+      "modalities": [
+        "Grants",
+        "Calls for proposals",
+        "Technical cooperation"
+      ],
+      "worksWith": [
+        "NGOs & civil society",
+        "Private sector",
+        "UN agencies",
+        "Governments"
+      ],
+      "links": {
+        "website": "https://www.gov.uk/government/organisations/foreign-commonwealth-development-office",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "",
+        "contact": ""
+      },
+      "source": "Unverified demo draft. Original demo source label: UK Government website",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "existing-demo-json",
+        "sourceFile": "donors.json",
+        "editorialStatus": "Retained for demo; requires factual review"
+      },
+      "annualFunding": "",
+      "innovativeFinance": "",
+      "opportunities": [],
+      "challenges": [],
+      "references": [],
+      "contributed": false
+    },
+    {
+      "id": "gates-foundation",
+      "name": "Gates Foundation",
+      "type": "Private foundation",
+      "shortDescription": "One of the world's largest private foundations, focused on global health, agricultural development, gender equality and US education.",
+      "overview": "The Gates Foundation is a private philanthropic foundation based in Seattle. It funds work on global health (including vaccines, polio eradication, maternal and child health and infectious diseases), agricultural development, gender equality, and education in the United States.\n\nIn 2025 the foundation announced that it plans to spend most of its resources over the following two decades and close by 2045, with a strong focus on ending preventable deaths of mothers and babies, eliminating deadly infectious diseases, and lifting people out of poverty.\n\nThe foundation works closely with governments, multilateral organisations and global health partnerships, and funds research and innovation.",
+      "howToPartner": "Most Gates Foundation grants are made by invitation, after programme staff identify partners that fit a specific strategy. Unsolicited proposals are generally not accepted.\n\nOpen opportunities exist through specific requests for proposals and innovation programmes such as Grand Challenges. Read the strategy for your area of work to see whether your project aligns.",
+      "sectors": [
+        "Health",
+        "Agriculture & food security",
+        "Gender equality"
+      ],
+      "priorities": [
+        "Global health",
+        "Smallholder farmers",
+        "Financial inclusion",
+        "Women's economic empowerment"
+      ],
+      "regions": [
+        "Sub-Saharan Africa",
+        "Asia & Pacific",
+        "Global"
+      ],
+      "countries": [
+        "India",
+        "Nigeria",
+        "Ethiopia"
+      ],
+      "sdgs": [
+        2,
+        3,
+        5,
+        17
+      ],
+      "modalities": [
+        "Grants",
+        "Calls for proposals",
+        "Guarantees & equity"
+      ],
+      "worksWith": [
+        "NGOs & civil society",
+        "Research institutions",
+        "Governments",
+        "UN agencies",
+        "Private sector"
+      ],
+      "links": {
+        "website": "https://www.gatesfoundation.org",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "",
+        "contact": ""
+      },
+      "source": "Unverified demo draft. Original demo source label: Gates Foundation official website",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "existing-demo-json",
+        "sourceFile": "donors.json",
+        "editorialStatus": "Retained for demo; requires factual review"
+      },
+      "annualFunding": "",
+      "innovativeFinance": "",
+      "opportunities": [],
+      "challenges": [],
+      "references": [],
+      "contributed": false
+    },
+    {
+      "id": "gcf",
+      "name": "Green Climate Fund (GCF)",
+      "type": "Global fund",
+      "shortDescription": "The world's largest dedicated climate fund, supporting developing countries to reduce emissions and adapt to climate change.",
+      "overview": "The Green Climate Fund was set up under the United Nations Framework Convention on Climate Change (UNFCCC) and is headquartered in Songdo, Republic of Korea. It aims to invest equally in climate mitigation and adaptation, with a strong share of adaptation funding going to the most vulnerable countries.\n\nGCF provides grants, concessional loans, equity and guarantees. Projects are submitted and implemented by Accredited Entities, which include UN agencies, development banks, national institutions and some NGOs.\n\nEach country has a National Designated Authority (NDA) that acts as the focal point and must give a no-objection letter for projects in that country.",
+      "howToPartner": "Organisations work with GCF either by becoming an Accredited Entity (a demanding process), or more often by partnering with an existing Accredited Entity and the country's National Designated Authority.\n\nThe GCF Readiness Programme funds capacity building and country programming, and is a good entry point for national institutions.",
+      "sectors": [
+        "Climate & environment",
+        "Infrastructure & energy",
+        "Agriculture & food security",
+        "Water & sanitation"
+      ],
+      "priorities": [
+        "Climate adaptation",
+        "Climate mitigation",
+        "Green transition"
+      ],
+      "regions": [
+        "Sub-Saharan Africa",
+        "Asia & Pacific",
+        "Latin America & Caribbean",
+        "Middle East & North Africa",
+        "Europe & Central Asia"
+      ],
+      "countries": [],
+      "sdgs": [
+        6,
+        7,
+        13,
+        15
+      ],
+      "modalities": [
+        "Grants",
+        "Loans",
+        "Guarantees & equity",
+        "Blended finance"
+      ],
+      "worksWith": [
+        "Governments",
+        "UN agencies",
+        "Private sector",
+        "NGOs & civil society"
+      ],
+      "links": {
+        "website": "https://www.greenclimate.fund",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "",
+        "contact": ""
+      },
+      "source": "Unverified demo draft. Original demo source label: Green Climate Fund official website",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "existing-demo-json",
+        "sourceFile": "donors.json",
+        "editorialStatus": "Retained for demo; requires factual review"
+      },
+      "annualFunding": "",
+      "innovativeFinance": "",
+      "opportunities": [],
+      "challenges": [],
+      "references": [],
+      "contributed": false
+    },
+    {
+      "id": "ifad",
+      "name": "International Fund for Agricultural Development (IFAD)",
+      "type": "UN agency",
+      "shortDescription": "A UN specialised agency and international financial institution investing in rural people, smallholder farmers and food systems.",
+      "overview": "IFAD, based in Rome, is both a specialised agency of the United Nations and an international financial institution. It provides loans and grants to governments to finance rural development programmes that raise the incomes and resilience of smallholder farmers and rural communities.\n\nIts work covers agricultural productivity, access to markets and finance, climate adaptation for small-scale agriculture, nutrition, and the inclusion of women, youth and Indigenous Peoples.\n\nIFAD's resources come from member-state replenishments, and it increasingly mobilises co-financing and private-sector investment for rural development.",
+      "howToPartner": "IFAD's main partners are governments, which implement IFAD-financed projects. NGOs, farmers' organisations and research institutions take part as service providers or implementing partners within those projects, and IFAD issues some grant calls for regional and global initiatives.\n\nThe project list on IFAD's website shows active investments by country.",
+      "sectors": [
+        "Agriculture & food security",
+        "Climate & environment",
+        "Private sector development"
+      ],
+      "priorities": [
+        "Smallholder farmers",
+        "Climate adaptation",
+        "Youth employment",
+        "Financial inclusion"
+      ],
+      "regions": [
+        "Sub-Saharan Africa",
+        "Asia & Pacific",
+        "Latin America & Caribbean",
+        "Middle East & North Africa"
+      ],
+      "countries": [],
+      "sdgs": [
+        1,
+        2,
+        5,
+        13
+      ],
+      "modalities": [
+        "Loans",
+        "Grants",
+        "Co-financing"
+      ],
+      "worksWith": [
+        "Governments",
+        "Community-based organisations",
+        "NGOs & civil society",
+        "Research institutions"
+      ],
+      "links": {
+        "website": "https://www.ifad.org",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "",
+        "contact": ""
+      },
+      "source": "Unverified demo draft. Original demo source label: IFAD official website",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "existing-demo-json",
+        "sourceFile": "donors.json",
+        "editorialStatus": "Retained for demo; requires factual review"
+      },
+      "annualFunding": "",
+      "innovativeFinance": "",
+      "opportunities": [],
+      "challenges": [],
+      "references": [],
+      "contributed": false
+    },
+    {
+      "id": "jica",
+      "name": "Japan International Cooperation Agency (JICA)",
+      "type": "Bilateral agency",
+      "shortDescription": "Japan's development agency, combining technical cooperation, concessional loans and grant aid, with a strong presence in Asia and Africa.",
+      "overview": "JICA implements most of Japan's official development assistance. It brings together three main tools: technical cooperation (experts, training and capacity development), ODA loans for large investments such as transport and energy infrastructure, and grant aid.\n\nJICA has a long history in Asia and a growing portfolio in Africa, linked to the Tokyo International Conference on African Development (TICAD). Priority areas include infrastructure, health, education, agriculture, disaster risk reduction and peacebuilding.\n\nJICA also runs volunteer programmes and partnerships with Japanese NGOs, local governments, universities and companies.",
+      "howToPartner": "JICA mostly works government-to-government, so national ministries are its main partners. NGOs can partner through the JICA Partnership Program, which is designed mainly for Japanese organisations, often working with local partners.\n\nIn partner countries, the JICA office is the entry point for understanding which programmes are active.",
+      "sectors": [
+        "Infrastructure & energy",
+        "Health",
+        "Education & skills",
+        "Agriculture & food security"
+      ],
+      "priorities": [
+        "Climate adaptation",
+        "Smallholder farmers",
+        "Fragile & conflict-affected settings",
+        "Digital transformation"
+      ],
+      "regions": [
+        "Asia & Pacific",
+        "Sub-Saharan Africa",
+        "Latin America & Caribbean",
+        "Middle East & North Africa"
+      ],
+      "countries": [],
+      "sdgs": [
+        2,
+        3,
+        4,
+        9,
+        11,
+        13
+      ],
+      "modalities": [
+        "Technical cooperation",
+        "Loans",
+        "Grants"
+      ],
+      "worksWith": [
+        "Governments",
+        "NGOs & civil society",
+        "Research institutions",
+        "Private sector"
+      ],
+      "links": {
+        "website": "https://www.jica.go.jp/english",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "",
+        "contact": ""
+      },
+      "source": "Unverified demo draft. Original demo source label: JICA official website; opportunities and challenges cleaned from supplied Donor Profile Cards, pages 32.",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "existing-demo-json",
+        "sourceFile": "donors.json",
+        "editorialStatus": "Retained for demo; requires factual review",
+        "additionalSource": {
+          "sourceFile": "Donor-Pofile-Card-Final-List.pdf",
+          "pages": "32"
+        }
+      },
+      "opportunities": [
+        "Industry-linked vocational training partnerships.",
+        "Agriculture modernisation and technical cooperation."
+      ],
+      "challenges": [
+        "Alignment with current programme priorities is necessary.",
+        "Existing institutional relationships described in the card are participant-specific, not general eligibility."
+      ],
+      "annualFunding": "",
+      "innovativeFinance": "",
+      "references": [],
+      "contributed": false
+    },
+    {
+      "id": "mastercard-foundation",
+      "name": "Mastercard Foundation",
+      "type": "Private foundation",
+      "shortDescription": "A private foundation focused on youth employment and education in Africa, and on Indigenous youth in Canada.",
+      "overview": "The Mastercard Foundation is an independent foundation based in Toronto. Its main strategy, Young Africa Works, aims to enable millions of young people in Africa, particularly young women, to access dignified and fulfilling work by 2030.\n\nThe foundation works through partnerships with governments, education institutions, financial service providers and businesses, often at country level in its priority countries. Its Scholars Program supports talented young people with limited financial means to pursue secondary and higher education.\n\nIn Canada, the foundation's EleV program works with Indigenous youth and communities on education and employment.",
+      "howToPartner": "The foundation generally identifies partners proactively and does not accept unsolicited proposals in most areas. Opportunities appear as targeted calls, challenge funds or partnerships within its country strategies.\n\nOrganisations working on youth employment in its priority African countries can follow its country programmes and partner organisations.",
+      "sectors": [
+        "Employment & decent work",
+        "Education & skills",
+        "Private sector development",
+        "Agriculture & food security"
+      ],
+      "priorities": [
+        "Youth employment",
+        "Women's economic empowerment",
+        "Financial inclusion",
+        "Digital transformation"
+      ],
+      "regions": [
+        "Sub-Saharan Africa"
+      ],
+      "countries": [
+        "Ghana",
+        "Kenya",
+        "Rwanda",
+        "Senegal",
+        "Uganda"
+      ],
+      "sdgs": [
+        4,
+        5,
+        8
+      ],
+      "modalities": [
+        "Grants",
+        "Calls for proposals"
+      ],
+      "worksWith": [
+        "NGOs & civil society",
+        "Private sector",
+        "Research institutions",
+        "Governments"
+      ],
+      "links": {
+        "website": "https://mastercardfdn.org",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "",
+        "contact": ""
+      },
+      "source": "Unverified demo draft. Original demo source label: Mastercard Foundation official website; opportunities and challenges cleaned from supplied Donor Profile Cards, pages 37, 40.",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "existing-demo-json",
+        "sourceFile": "donors.json",
+        "editorialStatus": "Retained for demo; requires factual review",
+        "additionalSource": {
+          "sourceFile": "Donor-Pofile-Card-Final-List.pdf",
+          "pages": "37, 40"
+        }
+      },
+      "opportunities": [
+        "Youth employability, entrepreneurship and skills programmes.",
+        "Partnerships supporting young women and underserved communities."
+      ],
+      "challenges": [
+        "Strong evidence and implementation capacity are highlighted in the supplied cards.",
+        "Conflicting funding figures and descriptions of modalities require verification."
+      ],
+      "annualFunding": "",
+      "innovativeFinance": "",
+      "references": [],
+      "contributed": false
+    },
+    {
+      "id": "rvo",
+      "name": "Netherlands Enterprise Agency (RVO)",
+      "type": "Bilateral agency",
+      "shortDescription": "A Dutch government agency described in the supplied card as supporting business and project development, renewable energy, climate action and international cooperation.",
+      "overview": "A Dutch government agency described in the supplied card as supporting business and project development, renewable energy, climate action and international cooperation.",
+      "howToPartner": "The supplied card names the Climate and Energy Response Facility as a programme example. Its cited webpages need to be resolved before a verified partnership link is added.",
+      "sectors": [
+        "Climate & environment",
+        "Infrastructure & energy",
+        "Private sector development"
+      ],
+      "priorities": [
+        "Green transition",
+        "Climate mitigation"
+      ],
+      "regions": [
+        "Global"
+      ],
+      "countries": [],
+      "sdgs": [
+        3,
+        7,
+        9,
+        13,
+        14
+      ],
+      "modalities": [
+        "Grants"
+      ],
+      "worksWith": [],
+      "annualFunding": "",
+      "innovativeFinance": "",
+      "opportunities": [
+        "Climate and energy programme partnerships.",
+        "International business and development cooperation initiatives."
+      ],
+      "challenges": [
+        "Programme-specific access routes and eligibility require verification."
+      ],
+      "links": {
+        "website": "",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "",
+        "contact": ""
+      },
+      "source": "Unverified editorial draft based on supplied Donor Profile Cards, pages 20. Not a live participant submission.",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "uploaded-profile-card",
+        "sourceFile": "Donor-Pofile-Card-Final-List.pdf",
+        "pages": "20",
+        "editorialStatus": "AI-assisted cleaning; course-team review required",
+        "taggingNote": "Sectors and thematic labels mapped from supplied text; not verified eligibility."
+      },
+      "references": [],
+      "contributed": false
+    },
+    {
+      "id": "open-society-foundations",
+      "name": "Open Society Foundations",
+      "type": "Private foundation",
+      "shortDescription": "The supplied card highlights democratic practice, rights, social justice, dignity and equity in governance.",
+      "overview": "The supplied card highlights democratic practice, rights, social justice, dignity and equity in governance.",
+      "howToPartner": "Review the current grants information and thematic programmes. Personal relationship notes from the supplied card have not been included as general donor characteristics.",
+      "sectors": [
+        "Governance & human rights"
+      ],
+      "priorities": [
+        "Democracy & human rights",
+        "Rule of law"
+      ],
+      "regions": [
+        "Sub-Saharan Africa",
+        "Europe & Central Asia"
+      ],
+      "countries": [],
+      "sdgs": [],
+      "modalities": [
+        "Grants",
+        "Core funding"
+      ],
+      "worksWith": [],
+      "annualFunding": "",
+      "innovativeFinance": "",
+      "opportunities": [
+        "Human rights, accountability, governance and policy reform.",
+        "Thematic outreach and partnership development."
+      ],
+      "challenges": [
+        "Current geographic priorities and grant access require verification."
+      ],
+      "links": {
+        "website": "https://www.opensocietyfoundations.org",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "https://www.opensocietyfoundations.org/grants",
+        "contact": ""
+      },
+      "source": "Unverified editorial draft based on supplied Donor Profile Cards, pages 33. Not a live participant submission.",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "uploaded-profile-card",
+        "sourceFile": "Donor-Pofile-Card-Final-List.pdf",
+        "pages": "33",
+        "editorialStatus": "AI-assisted cleaning; course-team review required",
+        "taggingNote": "Sectors and thematic labels mapped from supplied text; not verified eligibility."
+      },
+      "references": [],
+      "contributed": false
+    },
+    {
+      "id": "sida",
+      "name": "Swedish International Development Cooperation Agency (Sida)",
+      "type": "Bilateral agency",
+      "shortDescription": "Sweden's government agency for development cooperation, funding work on democracy, human rights, gender equality and climate.",
+      "overview": "Sida is a government agency under the Swedish Ministry for Foreign Affairs. It manages most of Sweden's bilateral development aid and humanitarian assistance, working through country and regional strategies decided by the Swedish government.\n\nSida rarely implements projects itself. It funds partners such as civil society organisations, UN agencies, multilateral organisations, research institutions and, in some cases, partner governments. Long-term support to strategic partners, including core funding for civil society organisations, has been a distinctive feature of Swedish aid.\n\nSwedish development cooperation has been reformed in recent years, with stronger links to trade, migration and support to Ukraine. Participants should read the current country or thematic strategy before approaching Sida, because funding is tied to these strategies.",
+      "howToPartner": "Most Sida funding goes through framework and strategic partner organisations rather than open calls. Smaller organisations usually access Sida funds indirectly, for example through Swedish civil society organisations that hold framework agreements, or through Swedish embassies in partner countries that manage the bilateral strategy.\n\nCheck the relevant country strategy, then contact the Swedish embassy's development section or a Swedish framework organisation working in your sector.",
+      "sectors": [
+        "Governance & human rights",
+        "Gender equality",
+        "Climate & environment",
+        "Health"
+      ],
+      "priorities": [
+        "Democracy & human rights",
+        "Women's economic empowerment",
+        "Climate adaptation",
+        "Fragile & conflict-affected settings"
+      ],
+      "regions": [
+        "Sub-Saharan Africa",
+        "Europe & Central Asia",
+        "Asia & Pacific",
+        "Middle East & North Africa",
+        "Latin America & Caribbean"
+      ],
+      "countries": [
+        "Ukraine",
+        "Kenya",
+        "Mozambique",
+        "Bangladesh",
+        "Colombia"
+      ],
+      "sdgs": [
+        5,
+        10,
+        13,
+        16,
+        17
+      ],
+      "modalities": [
+        "Grants",
+        "Core funding",
+        "Technical cooperation"
+      ],
+      "worksWith": [
+        "NGOs & civil society",
+        "UN agencies",
+        "Governments",
+        "Research institutions"
+      ],
+      "links": {
+        "website": "https://www.sida.se/en",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "",
+        "contact": ""
+      },
+      "source": "Unverified demo draft. Original demo source label: Sida official website",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "existing-demo-json",
+        "sourceFile": "donors.json",
+        "editorialStatus": "Retained for demo; requires factual review"
+      },
+      "annualFunding": "",
+      "innovativeFinance": "",
+      "opportunities": [],
+      "challenges": [],
+      "references": [],
+      "contributed": false
+    },
+    {
+      "id": "global-fund",
+      "name": "The Global Fund to Fight AIDS, Tuberculosis and Malaria",
+      "type": "Global fund",
+      "shortDescription": "A global partnership that raises and invests funds to end AIDS, tuberculosis and malaria and to strengthen health systems.",
+      "overview": "The Global Fund is a partnership of governments, civil society, technical agencies, the private sector and people affected by the diseases. Based in Geneva, it raises money in three-year replenishment cycles and allocates it to eligible countries.\n\nFunding is channelled through country-owned processes. In each country, a Country Coordinating Mechanism (CCM), which includes government, civil society, communities and partners, prepares funding requests and oversees grants. Grants are managed by Principal Recipients, which can be government bodies, NGOs or UN agencies.\n\nBeyond the three diseases, the Global Fund invests in resilient health systems, community systems, and pandemic preparedness.",
+      "howToPartner": "Organisations cannot apply directly to the Global Fund outside the country process. The main entry points are the Country Coordinating Mechanism in your country and the Principal Recipients, which subcontract Sub-Recipients to implement activities.\n\nCommunity and civil society organisations are expected to take part in the CCM's country dialogue when funding requests are prepared.",
+      "sectors": [
+        "Health"
+      ],
+      "priorities": [
+        "Global health",
+        "Fragile & conflict-affected settings"
+      ],
+      "regions": [
+        "Sub-Saharan Africa",
+        "Asia & Pacific",
+        "Latin America & Caribbean",
+        "Europe & Central Asia",
+        "Middle East & North Africa"
+      ],
+      "countries": [],
+      "sdgs": [
+        3,
+        10,
+        17
+      ],
+      "modalities": [
+        "Grants",
+        "Co-financing"
+      ],
+      "worksWith": [
+        "Governments",
+        "NGOs & civil society",
+        "Community-based organisations",
+        "UN agencies"
+      ],
+      "links": {
+        "website": "https://www.theglobalfund.org",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "",
+        "contact": ""
+      },
+      "source": "Unverified demo draft. Original demo source label: Global Fund official website; opportunities and challenges cleaned from supplied Donor Profile Cards, pages 9–10, 39.",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "existing-demo-json",
+        "sourceFile": "donors.json",
+        "editorialStatus": "Retained for demo; requires factual review",
+        "additionalSource": {
+          "sourceFile": "Donor-Pofile-Card-Final-List.pdf",
+          "pages": "9–10, 39"
+        }
+      },
+      "opportunities": [
+        "Country-level collaboration on disease programmes and health systems.",
+        "Civil society and community outreach through relevant national processes."
+      ],
+      "challenges": [
+        "Country co-financing requirements and replenishment-cycle uncertainty.",
+        "Country-specific allocations should not be read as global annual funding."
+      ],
+      "annualFunding": "",
+      "innovativeFinance": "",
+      "references": [],
+      "contributed": false
+    },
+    {
+      "id": "uncdf",
+      "name": "United Nations Capital Development Fund (UNCDF)",
+      "type": "UN agency",
+      "shortDescription": "The supplied card describes a focus on financial inclusion, local development finance, digital finance, SMEs and inclusive growth in least developed countries.",
+      "overview": "The supplied card describes a focus on financial inclusion, local development finance, digital finance, SMEs and inclusive growth in least developed countries.",
+      "howToPartner": "",
+      "sectors": [
+        "Private sector development",
+        "Climate & environment"
+      ],
+      "priorities": [
+        "Financial inclusion",
+        "Climate adaptation"
+      ],
+      "regions": [
+        "Sub-Saharan Africa",
+        "Asia & Pacific"
+      ],
+      "countries": [],
+      "sdgs": [
+        1,
+        8,
+        9,
+        10
+      ],
+      "modalities": [
+        "Grants",
+        "Loans",
+        "Blended finance",
+        "Co-financing"
+      ],
+      "worksWith": [],
+      "annualFunding": "",
+      "innovativeFinance": "The supplied card mentions catalytic grants and the BUILD Fund. Current availability and terms require checking.",
+      "opportunities": [
+        "Digital financial services and fintech partnerships.",
+        "Support for microfinance institutions and local finance.",
+        "Financial inclusion initiatives in fragile settings."
+      ],
+      "challenges": [
+        "Highly targeted programmes and limited resources relative to larger institutions.",
+        "Innovation and measurable impact are highlighted in the supplied card."
+      ],
+      "links": {
+        "website": "https://www.uncdf.org",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "",
+        "contact": ""
+      },
+      "source": "Unverified editorial draft based on supplied Donor Profile Cards, pages 25–26. Not a live participant submission.",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "uploaded-profile-card",
+        "sourceFile": "Donor-Pofile-Card-Final-List.pdf",
+        "pages": "25–26",
+        "editorialStatus": "AI-assisted cleaning; course-team review required",
+        "taggingNote": "Sectors and thematic labels mapped from supplied text; not verified eligibility."
+      },
+      "references": [],
+      "contributed": false
+    },
+    {
+      "id": "undp",
+      "name": "United Nations Development Programme (UNDP)",
+      "type": "UN agency",
+      "shortDescription": "The UN's development agency, present in around 170 countries and territories, working on poverty, governance, climate and crisis recovery.",
+      "overview": "UNDP supports countries to eradicate poverty, reduce inequalities and build resilience. Its work covers democratic governance, climate and environment, energy, crisis prevention and recovery, and support to national SDG planning.\n\nUNDP is both a funding channel and an implementer. It manages large programmes funded by governments, the EU, vertical funds such as the Global Environment Facility and the Green Climate Fund, and pooled funds.\n\nIt often works as a convener between governments, civil society and the private sector, and it hosts the UN Volunteers programme and the UN Capital Development Fund.",
+      "howToPartner": "Civil society organisations can become UNDP responsible parties or grant recipients under specific projects, usually selected through calls published by the country office. UNDP also runs the GEF Small Grants Programme, which funds community-based environmental projects.\n\nGovernments and donors engage with UNDP through cost-sharing agreements. Procurement opportunities are published on UN procurement platforms.",
+      "sectors": [
+        "Governance & human rights",
+        "Climate & environment",
+        "Social protection",
+        "Infrastructure & energy"
+      ],
+      "priorities": [
+        "Fragile & conflict-affected settings",
+        "Climate adaptation",
+        "Digital transformation",
+        "Rule of law"
+      ],
+      "regions": [
+        "Global"
+      ],
+      "countries": [],
+      "sdgs": [
+        1,
+        5,
+        10,
+        13,
+        16,
+        17
+      ],
+      "modalities": [
+        "Technical cooperation",
+        "Calls for proposals",
+        "Grants",
+        "Co-financing"
+      ],
+      "worksWith": [
+        "Governments",
+        "NGOs & civil society",
+        "Community-based organisations",
+        "Private sector"
+      ],
+      "links": {
+        "website": "https://www.undp.org",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "",
+        "contact": ""
+      },
+      "source": "Unverified demo draft. Original demo source label: UNDP official website",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "existing-demo-json",
+        "sourceFile": "donors.json",
+        "editorialStatus": "Retained for demo; requires factual review"
+      },
+      "annualFunding": "",
+      "innovativeFinance": "",
+      "opportunities": [],
+      "challenges": [],
+      "references": [],
+      "contributed": false
+    },
+    {
+      "id": "world-bank",
+      "name": "World Bank Group",
+      "type": "Development bank",
+      "shortDescription": "A family of international financial institutions providing loans, grants, guarantees and knowledge to governments and the private sector in developing countries.",
+      "overview": "The World Bank Group includes the International Bank for Reconstruction and Development (IBRD), which lends to middle-income countries, and the International Development Association (IDA), which provides grants and highly concessional credits to the poorest countries. The International Finance Corporation (IFC) and MIGA work with the private sector.\n\nThe Bank finances large programmes in infrastructure, health, education, social protection, agriculture and climate, and produces widely used research and data.\n\nIts main counterparts are national governments. Civil society organisations engage mainly through consultations, as implementing partners within government projects, or through specific trust funds and grant programmes.",
+      "howToPartner": "Most World Bank funding flows through governments, so the most realistic route for NGOs and consultants is to engage with Bank-financed national projects, for example through procurement notices published by implementing ministries.\n\nThe World Bank's projects database lets you search active and pipeline operations by country and sector.",
+      "sectors": [
+        "Infrastructure & energy",
+        "Health",
+        "Education & skills",
+        "Social protection",
+        "Agriculture & food security",
+        "Private sector development"
+      ],
+      "priorities": [
+        "Climate adaptation",
+        "Financial inclusion",
+        "Fragile & conflict-affected settings",
+        "Digital transformation"
+      ],
+      "regions": [
+        "Global"
+      ],
+      "countries": [],
+      "sdgs": [
+        1,
+        3,
+        4,
+        7,
+        8,
+        9,
+        13
+      ],
+      "modalities": [
+        "Loans",
+        "Grants",
+        "Guarantees & equity",
+        "Technical cooperation"
+      ],
+      "worksWith": [
+        "Governments",
+        "Private sector",
+        "NGOs & civil society"
+      ],
+      "links": {
+        "website": "https://www.worldbank.org",
+        "strategy": "",
+        "annualReport": "",
+        "partnership": "",
+        "contact": ""
+      },
+      "source": "Unverified demo draft. Original demo source label: World Bank official website; opportunities and challenges cleaned from supplied Donor Profile Cards, pages 3–4, 34–35, 38.",
+      "lastChecked": "",
+      "verificationStatus": "unverified",
+      "provenance": {
+        "origin": "existing-demo-json",
+        "sourceFile": "donors.json",
+        "editorialStatus": "Retained for demo; requires factual review",
+        "additionalSource": {
+          "sourceFile": "Donor-Pofile-Card-Final-List.pdf",
+          "pages": "3–4, 34–35, 38"
+        }
+      },
+      "opportunities": [
+        "Capacity development and performance tracking within government-led programmes.",
+        "Implementation support for health, education and basic service projects."
+      ],
+      "challenges": [
+        "Complex procurement, safeguards and compliance requirements.",
+        "Limited direct access for small organisations outside government-led projects."
+      ],
+      "annualFunding": "",
+      "innovativeFinance": "",
+      "references": [],
+      "contributed": false
+    }
+  ]
+}
